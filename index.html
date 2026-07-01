@@ -251,8 +251,8 @@ footer { padding: 40px 24px; text-align: center; color: rgba(255,255,255,0.3); f
           <li>2FA obligatoire</li>
           <li>Support prioritaire</li>
         </ul>
-        <!-- STRIPE PAYMENT LINK A AJOUTER ICI -->
-        <a href="#" id="stripeLink" class="pricing-btn" target="_blank">💰 Réserver mon CRM</a>
+        <a href="#" id="stripeLink" class="pricing-btn" target="_blank" style="margin-bottom:8px">💳 Payer par carte — 19€/mois</a>
+        <a href="#" id="cryptoLink" class="pricing-btn" target="_blank" style="background:transparent;border:1px solid rgba(255,255,255,0.1);font-size:13px">₿ Payer en crypto (ETH/BTC/USDT)</a>
       </div>
     </div>
   </div>
@@ -290,6 +290,13 @@ function updateStock(n) {
 }
 
 updateStock(available);
+
+// Payment links — à configurer après création des comptes
+const STRIPE_LINK = "https://buy.stripe.com/xxx"; // ← À REMPLACER
+const CRYPTO_LINK = "https://nowpayments.io/payment/?iid=xxx"; // ← À REMPLACER
+
+document.getElementById('stripeLink').href = STRIPE_LINK;
+document.getElementById('cryptoLink').href = CRYPTO_LINK;
 </script>
 </body>
 </html>
